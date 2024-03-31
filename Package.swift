@@ -24,7 +24,6 @@ let package = Package(
             name: "SystemAPIKit",
             dependencies: [
                 .product(name: "FeatherOpenAPIKit", package: "feather-openapi-kit"),
-                .product(name: "FeatherOpenAPIKitMacros", package: "feather-openapi-kit"),
                 .product(name: "FeatherAPIKit", package: "feather-api-kit"),
             ],
             plugins: [
@@ -37,7 +36,6 @@ let package = Package(
             dependencies: [
                 .product(name: "Yams", package: "Yams"),
                 .product(name: "FeatherOpenAPIKit", package: "feather-openapi-kit"),
-                .product(name: "FeatherOpenAPIKitMacros", package: "feather-openapi-kit"),
                 .target(name: "SystemAPIKit"),
             ]
         ),
