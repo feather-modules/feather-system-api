@@ -46,23 +46,19 @@ extension System.Variable {
             ]
         }
 
-        enum BulkDelete: Operation {
+        enum Delete: Operation {
             static let security: [SecurityScheme.Type] = .shared
             static let tag: Tag.Type = Tags.Main.self
-            static let summary = "Bulk delete system variables"
+            static let summary = "Delete one system variable"
             static let description = """
-                Bulk delete system variables using identifiers
+                Delete one system variable using identifier
                 """
-
-            static let requestBody: RequestBody.Type? = RequestBodies.BulkDelete
-                .self
             static let responses: [OperationResponse] = [
                 .noContent,
                 .badRequest,
                 .unauthorized,
                 .forbidden,
                 .notFound,
-                .unsupportedMediaType,
                 .unprocessableContent,
             ]
         }
