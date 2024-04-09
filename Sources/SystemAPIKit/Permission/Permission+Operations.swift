@@ -39,21 +39,19 @@ extension System.Permission {
             ]
         }
 
-        enum BulkDelete: Operation {
+        enum Delete: Operation {
             static let security: [SecurityScheme.Type] = .shared
             static let tag: Tag.Type = Tags.Main.self
-            static let summary = "Bulk delete system permissions"
+            static let summary = "Delete one system permission"
             static let description =
-                "Removes multiple system permissions at once"
-            static let requestBody: RequestBody.Type? = RequestBodies.BulkDelete
-                .self
+                "Delete one system permission using identifier"
+
             static let responses: [OperationResponse] = [
                 .noContent,
                 .badRequest,
                 .unauthorized,
                 .forbidden,
                 .notFound,
-                .unsupportedMediaType,
                 .unprocessableContent,
             ]
         }
