@@ -4,3 +4,4 @@ Packages
 xcuserdata
 DerivedData
 .swiftpm
+openapi/openapi.yaml

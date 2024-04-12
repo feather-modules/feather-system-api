@@ -85,12 +85,6 @@ extension System.Variable {
             ]
         }
 
-        enum BulkDelete: ArraySchema {
-            static let description =
-                "The list of the keys to be deleted."
-            static let items: Schema.Type = Key.self
-        }
-
         enum Create: ObjectSchema {
             static let description = ""
             static let properties: [ObjectSchemaProperty] = [
