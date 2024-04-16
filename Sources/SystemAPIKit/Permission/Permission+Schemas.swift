@@ -106,10 +106,5 @@ extension System.Permission {
             ]
         }
 
-        public enum BulkDelete: ArraySchema {
-            public static let description =
-                "The list of the keys to be deleted."
-            public static let items: Schema.Type = Key.self
-        }
     }
 }
